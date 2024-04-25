@@ -13,11 +13,11 @@ git clone https://github.com/lvguangai/react_cli_lg.git
 
 cd react_cli_lg
 
-npm install (安装依赖包)
+pnpm install (安装依赖包)
 
-npm run vite (访问)
+pnpm run vite (访问)
 
-npm run build (项目打包)
+pnpm run build (项目打包)
 
 访问: http://localhost:5173/
 

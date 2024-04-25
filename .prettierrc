@@ -1,11 +1,16 @@
 {
+  "semi": false,
   "printWidth": 100,
-  "tabWidth": 2,
   "useTabs": true,
-  "eslintIntegration": true,
   "singleQuote": true,
-  "semi": true,
   "trailingComma": "none",
-  "bracketSpacing": false,
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "arrowParens": "always",
+  "htmlWhitespaceSensitivity": "ignore",
+  "vueIndentScriptAndStyle": false,
+  "endOfLine": "auto",
+  "singleAttributePerLine": false,
+  "eslintIntegration": true,
   "jsxBracketSameLine": false
 }
