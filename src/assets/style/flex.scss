@@ -1,0 +1,66 @@
+// 想到了覆盖常用属性的所有属性值,使用scss的编程
+// 主轴方向 属性值
+$directionList: row , row-reverse , column , column-reverse;
+// 主轴对齐方式 属性值
+$justifyContentList: flex-start , flex-end , center , space-between , space-around;
+// 交叉轴对齐方式 属性值
+$alignItemsList: flex-start , flex-end , center , baseline , stretch;
+
+// 三层遍历，组合所有属性值
+@each $direction in $directionList {
+  
+  // 简化一些属性值
+  $dir: $direction;
+  @if $direction == 'row' {
+    $dir: 'x';
+  }
+  @if $direction == 'column' {
+    $dir: 'y';
+  }
+  @each $justifyContent in $justifyContentList {
+
+    // 简化一些属性值
+    $JC: $justifyContent;
+    @if $justifyContent == 'flex-start' {
+      $JC: 'start';
+    }
+    @if $justifyContent == 'flex-end' {
+      $JC: 'end';
+    }
+    @if $justifyContent == 'space-between' {
+      $JC: 'between';
+    }
+    @if $justifyContent == 'space-around' {
+      $JC: 'around';
+    }
+    @each $alignItems in $alignItemsList {
+
+      // 简化一些属性值
+      $AI: $alignItems;
+      @if $alignItems == 'flex-start' {
+        $AI: 'start';
+      }
+      @if $alignItems == 'flex-end' {
+        $AI: 'end';
+      }
+      
+      // 根据变量，组合为css代码
+      @if $AI == 'center' {
+        .flex-#{$dir}-#{$JC} {
+          display: flex;
+          flex-direction: $direction;
+          justify-content: $justifyContent;
+          align-items: center;
+        }
+      }
+      @else {
+        .flex-#{$dir}-#{$JC}-#{$AI} {
+          display: flex;
+          flex-direction: $direction;
+          justify-content: $justifyContent;
+          align-items: $alignItems;
+        }
+      }
+    }
+  }
+}
