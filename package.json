@@ -1,10 +1,10 @@
 {
-  "name": "@lvguangai/reactcli",
+  "name": "@lvguangai/react-cli",
   "description": "react + vite脚手架",
   "version": "0.0.1",
   "author": "lgzhoumingjie <zhoumingjie@lvguang.ai>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "type": "module",
   "engines": {
     "node": "^18.0.0 || >=20.0.0"
