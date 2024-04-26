@@ -6,7 +6,7 @@ const Info = () => {
 	const [count, setCount] = useState(0)
 	console.log('fdsfsdd')
 	return (
-		<div className="info">
+		<div className="info flex-x-center">
 			<p className="title">详情1</p>
 			{count}
 			<Button onClick={() => setCount(count + 1)}>添加</Button>
