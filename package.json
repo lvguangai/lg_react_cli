@@ -1,8 +1,24 @@
 {
-  "name": "react_vite",
+  "name": "@lvguangai/lg_react_cli",
+  "description": "react + vite脚手架",
+  "version": "1.0.0",
+  "author": "lgzhoumingjie <zhoumingjie@lvguang.ai>",
+  "license": "MIT",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "homepage": "https://github.com/lvguangai/lg_react_cli/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvguangai/lg_react_cli.git"
+  },
+  "keywords": [
+    "react",
+    "lg_react_cli",
+    "vite"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

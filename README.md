@@ -1,6 +1,6 @@
 # 项目介绍
 
-react_cli_lg 是一个快速启动 react 的脚手架
+lg_react_cli 是一个快速启动 react 的脚手架
 
 ## 技术栈
 
@@ -9,15 +9,15 @@ react + redux + react-router + vite + ES6/7 + sass + antd + typescript
 # 项目运行
 
 ```
-git clone https://github.com/lvguangai/react_cli_lg.git
+git clone https://github.com/lvguangai/lg_react_cli.git
 
-cd react_cli_lg
+cd lg_react_cli
 
-pnpm install (安装依赖包)
+npm install (安装依赖包)
 
-pnpm run vite (访问)
+npm run vite (访问)
 
-pnpm run build (项目打包)
+npm run build (项目打包)
 
 访问: http://localhost:5173/
 
