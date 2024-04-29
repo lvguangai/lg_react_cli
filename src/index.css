@@ -13,17 +13,5 @@ table { border-collapse:collapse; }
 .clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
 .clearfix { zoom: 1; }
 
-:root {
-  --color-bffaff: #bffaff;
-  --color-00f1ff: #00f1ff;
-  --color-fff: #fff;
-  --font-12: 12px;
-  --font-14: 14px;
-  --font-16: 16px;
-  --font-18: 18px;
-  --font-20: 20px;
-  --font-49: 49px;
-}
-
 
 
