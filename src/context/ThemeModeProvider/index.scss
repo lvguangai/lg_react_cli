@@ -1,14 +1,61 @@
 :root {
-  --font-12: 12px;
-  --font-14: 14px;
-  --font-16: 16px;
-  --font-18: 18px;
-  --font-20: 20px;
-  --font-49: 49px;
+	--font-12: 12px;
+	--font-14: 14px;
+	--font-16: 16px;
+	--font-18: 18px;
+	--font-20: 20px;
+	--font-22: 22px;
+	--font-24: 24px;
+	--font-28: 28px;
+	--font-32: 32px;
+	--font-49: 49px;
+	--transition-duration: 0.5s;
+	--transition-timing-function: ease-in-out;
+	--btn-bgc-public: rgba(194, 128, 255, 0.1);
 }
-.dark{
-  --font-color-public: #000;
+
+[data-theme='light'] {
+	color-scheme: light;
+	--font-color-public: #000;
+	--font-color-date: #b4b4b4;
+	--font-color-aaa: #aaa;
+	--font-color-7f: #7f7f7f;
+
+	--modal-close-color: #8a8a8a;
+
+	--home-bgc: #fff;
+	--send-bgc: #fff;
+	--history-bgc: rgba(255, 255, 255, 0.8);
+	--nav-bgc: #f9f9f9;
+	--nav-item-bgc: #ececec;
+	--nav-line-bgc: #c6c6c6;
+	--source-info-bgc: #f2f2f2;
+	--nav-line-hover-bgc: #000;
+	--question-item-bgc: rgba(194, 128, 255, 0.1);
+
+	--border-icon: rgba(0, 0, 0, 0.15);
+	--border-question: #f2f2f2;
 }
-.light{
-  --font-color-public: #fff;
+
+[data-theme='dark'] {
+	color-scheme: dark;
+	--font-color-public: #fff;
+	--font-color-date: #b4b4b4;
+	--font-color-aaa: #aaa;
+	--font-color-7f: #7f7f7f;
+
+	--modal-close-color: #8a8a8a;
+
+	--home-bgc: #1f1f1f;
+	--send-bgc: #1f1f1f;
+	--history-bgc: rgba(47, 47, 47, 0.8);
+	--nav-bgc: #3f3f3f;
+	--nav-item-bgc: #ececec;
+	--nav-line-bgc: #c6c6c6;
+	--source-info-bgc: #f2f2f2;
+	--nav-line-hover-bgc: #fff;
+	--question-item-bgc: rgba(194, 128, 255, 0.1);
+
+	--border-icon: rgba(0, 0, 0, 0.15);
+	--border-question: #f2f2f2;
 }
