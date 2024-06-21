@@ -1,0 +1,38 @@
+.fc-form-info {
+	width: 470px;
+	height: fit-content;
+	padding: 25px 47px 39px;
+	border-radius: 14px;
+	background: var(--home-bgc);
+	box-sizing: border-box;
+	border: 1px solid #f2f2f2;
+	.ant-input {
+		height: 40px;
+		border-radius: 3px;
+		border: 1px solid #f2f2f2;
+	}
+	.ant-input-affix-wrapper {
+		border-radius: 3px;
+		border: 1px solid #f2f2f2;
+		.ant-input {
+			height: 32px;
+			border: none;
+		}
+	}
+	.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+		border-color: #c280ff;
+		border-right-width: 1px;
+		z-index: 1;
+	}
+}
+@media screen and (max-width: 480px) {
+	.fc-form-info {
+		width: 90%;
+		margin: 0 auto;
+		height: fit-content;
+		padding: 25px 15px;
+		border-radius: 14px;
+		background-color: #ffffff;
+		box-sizing: border-box;
+	}
+}

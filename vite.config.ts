@@ -1,11 +1,29 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import autoprefixer from 'autoprefixer'
-
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
+	//server: {
+	//	hmr: false
+	//},
+	build: {
+		minify: 'terser',
+		terserOptions: {
+			compress: {
+				drop_console: true, // 移除console语句
+				drop_debugger: true // 移除debugger语句
+			}
+		}
+	},
+	plugins: [
+		react(),
+		createSvgIconsPlugin({
+			iconDirs: [fileURLToPath(new URL('./src/assets/icons', import.meta.url))],
+			symbolId: 'icon-[name]'
+		})
+	],
 	css: {
 		postcss: {
 			// 关键代码

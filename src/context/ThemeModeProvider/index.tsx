@@ -3,6 +3,7 @@ import { ConfigProvider, theme } from 'antd'
 import './index.scss'
 interface PropsParams {
 	onSetTheme: (s: string) => void
+	themeStatus: boolean
 }
 
 const ThemeContext = createContext({} as PropsParams)
@@ -22,11 +23,22 @@ const ThemeModeProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
 		setThemeStatus(val === 'light' ? true : false)
 	}
 	return (
-		<ThemeContext.Provider value={{ onSetTheme }}>
+		<ThemeContext.Provider value={{ onSetTheme, themeStatus }}>
 			<ConfigProvider
 				theme={{
+					components: {
+						Switch: {
+							handleBg: themeStatus ? '#ffffff' : '#000'
+						},
+						Input: {
+							activeBg: themeStatus ? '#ffffff' : '#2f2f2f'
+						}
+					},
 					token: {
-						colorPrimary: '#c280ff'
+						colorPrimary: themeStatus ? '#c280ff' : '#fff',
+						colorBgElevated: themeStatus ? '#ffffff' : '#2f2f2f',
+						colorBgContainer: themeStatus ? '#ffffff' : '#2f2f2f',
+						borderRadiusLG: 18
 					},
 					algorithm: themeStatus ? theme.defaultAlgorithm : theme.darkAlgorithm
 				}}>

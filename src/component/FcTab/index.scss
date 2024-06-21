@@ -1,0 +1,38 @@
+.fc-tabs-list {
+	display: flex;
+	align-items: center;
+	.tabs-item {
+		margin-right: 30px;
+		cursor: pointer;
+		position: relative;
+		font-weight: bold;
+		background-color: transparent;
+		&::after {
+			content: '';
+			width: 0;
+			height: 2px;
+			background-color: #c280ff;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			transition: width 0.4s;
+		}
+	}
+	.active {
+		font-weight: bold;
+		color: #c280ff;
+		&::after {
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width: 480px) {
+	.fc-tabs-list {
+		justify-content: space-between;
+		.tabs-item {
+			margin-right: 0;
+		}
+	}
+}

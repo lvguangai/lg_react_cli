@@ -1,0 +1,31 @@
+.login-code-wrapper {
+	width: 100%;
+	height: 100vh;
+	background: var(--home-bgc);
+	.form-wrapper {
+		width: 100%;
+		height: 100%;
+	}
+	.form-content {
+		max-width: 1440px;
+		height: 100%;
+		margin: 0px auto;
+		overflow-y: auto;
+		padding: 0px 35px;
+		box-sizing: border-box;
+	}
+	.ant-btn {
+		height: 40px !important;
+	}
+}
+@media screen and (max-width: 480px) {
+	.login-code-wrapper {
+		.form-content {
+			padding: 0px 5px 20px;
+		}
+
+		.fs-28 {
+			font-size: 20px;
+		}
+	}
+}
