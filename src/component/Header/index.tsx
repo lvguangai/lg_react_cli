@@ -13,7 +13,7 @@ interface ParamsProps {
 	signIsStatus?: boolean
 }
 
-const Header: FC<ParamsProps> = ({ title = '私募基金募资管理平台', signIsStatus = false }) => {
+const Header: FC<ParamsProps> = ({ title = 'LG_REACT_CLI', signIsStatus = false }) => {
 	const { nickname, onInit } = useUser()
 	const navigate = useNavigate()
 	const onSignOut = () => {

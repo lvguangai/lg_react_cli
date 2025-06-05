@@ -1,7 +1,7 @@
 {
   "name": "@lvguangai/react-cli",
   "description": "react + vite脚手架",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "lgzhoumingjie <zhoumingjie@lvguang.ai>",
   "license": "MIT",
   "private": false,
@@ -14,14 +14,19 @@
     "type": "git",
     "url": "git+https://github.com/lvguangai/lg_react_cli.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "react",
     "lg_react_cli",
-    "vite"
+    "vite",
+    "react-cli",
+    "@lvguangai/react-cli"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build --mode production",
     "lint": "eslint . --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install"

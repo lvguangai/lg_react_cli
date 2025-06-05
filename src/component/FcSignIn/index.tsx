@@ -68,7 +68,7 @@ const FcSignIn: FC = () => {
 	return (
 		<div className="fc-form-info flex-none">
 			<h3 className="fs-22 fs-bold mb-20 text-center">
-				欢迎来到 <span className="color-c280ff">《私募基金募资管理平台》</span>
+				欢迎来到 <span className="color-c280ff">《LG_REACT_CLI》</span>
 			</h3>
 			<section className="mb-25">
 				<FcTab

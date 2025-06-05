@@ -77,7 +77,7 @@ const SignUp = (): React.ReactNode => {
 							<div className="flex-x-center form-content">
 								<div className="form-info">
 									<h3 className="fs-22 fs-bold mb-20 text-center">
-										欢迎注册 <span className="color-c280ff">《私募基金募资管理平台》</span>
+										欢迎注册 <span className="color-c280ff">《LG_REACT_CLI》</span>
 									</h3>
 									<Form
 										name="basic"
@@ -206,7 +206,7 @@ const SignUp = (): React.ReactNode => {
 							<div className="flex-x-center" style={{ width: '100%', height: '100%' }}>
 								<div className="success-wrapper">
 									<h3 className="fs-22 fs-bold text-center mb-30">
-										欢迎来到 <span className="color-c280ff">《私募基金募资管理平台》</span>
+										欢迎来到 <span className="color-c280ff">《LG_REACT_CLI》</span>
 									</h3>
 									<p className="fs-14 color-333 text-center mb-20">恭喜你，注册完成！</p>
 									<Button
