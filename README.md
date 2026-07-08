@@ -4,7 +4,12 @@ lg_react_cli 是一个快速启动 react 的脚手架
 
 ## 技术栈
 
-react + redux + react-router + vite + ES6/7 + sass + antd + typescript
+React 19 + React Router 7 + Vite 8 + TypeScript 6 + Sass + Ant Design 6 + Axios
+
+## 环境要求
+
+- Node.js >= 20.19.0 或 >= 22.12.0
+- pnpm 11.x
 
 # 项目运行
 
@@ -13,14 +18,23 @@ git clone https://github.com/lvguangai/lg_react_cli.git
 
 cd lg_react_cli
 
-npm install (安装依赖包)
+pnpm install
 
-npm run vite (访问)
+pnpm dev
 
-npm run build (项目打包)
+pnpm build
 
 访问: http://localhost:5173/
 
+```
+
+## 常用命令
+
+```
+pnpm dev       # 本地开发
+pnpm build     # 类型检查并生产打包
+pnpm lint      # ESLint 自动修复并检查
+pnpm preview   # 预览生产构建
 ```
 
 # 依赖库文档

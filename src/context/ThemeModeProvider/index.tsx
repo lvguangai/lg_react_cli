@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, FC, useLayoutEffect } from 'react'
+import React, { createContext, useContext, useState, FC, useLayoutEffect, useCallback } from 'react'
 import { ConfigProvider, theme } from 'antd'
 import './index.scss'
 interface PropsParams {
@@ -8,20 +8,20 @@ interface PropsParams {
 
 const ThemeContext = createContext({} as PropsParams)
 const ThemeModeProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
-	const [themeStatus, setThemeStatus] = useState<boolean>(true) // theme: false 暗黑模式
-	useLayoutEffect(() => {
-		// 当然也可以根据本地缓存来修改默认值 如
-		if (localStorage.getItem('themeMode') === 'dark') {
-			onSetTheme('dark')
-		} else {
-			onSetTheme('light')
-		}
+	const [themeStatus, setThemeStatus] = useState<boolean>(() => {
+		return localStorage.getItem('themeMode') !== 'dark'
+	}) // theme: false 暗黑模式
+
+	const onSetTheme = useCallback((val: string) => {
+		setThemeStatus(val === 'light')
 	}, [])
-	const onSetTheme = (val: string) => {
-		document.documentElement.setAttribute('data-theme', val)
-		localStorage.setItem('themeMode', val)
-		setThemeStatus(val === 'light' ? true : false)
-	}
+
+	useLayoutEffect(() => {
+		const themeMode = themeStatus ? 'light' : 'dark'
+		document.documentElement.setAttribute('data-theme', themeMode)
+		localStorage.setItem('themeMode', themeMode)
+	}, [themeStatus])
+
 	return (
 		<ThemeContext.Provider value={{ onSetTheme, themeStatus }}>
 			<ConfigProvider
