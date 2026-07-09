@@ -24,7 +24,7 @@ nvm install
 
 nvm use
 
-npm install -g pnpm@11.7.0 --force
+npm install -g pnpm@11.7.0 --force --registry=https://mirrors.huaweicloud.com/repository/npm/
 
 pnpm install
 
@@ -45,6 +45,41 @@ pnpm lint      # ESLint 自动修复并检查
 pnpm preview   # 预览生产构建
 ```
 
+## Docker 部署
+
+项目 Docker 构建环境与本地工具链保持一致：
+
+- 构建阶段：`node:22.13.0-alpine`
+- 包管理器：`pnpm@11.7.0`
+- 运行阶段：`nginx:stable-alpine`
+- 服务端口：`9000`
+
+构建镜像：
+
+```
+docker build -t lg-react-cli .
+```
+
+如需临时切换 npm registry：
+
+```
+docker build \
+  --build-arg NPM_REGISTRY=https://registry.npmjs.org/ \
+  -t lg-react-cli .
+```
+
+启动容器：
+
+```
+docker run --rm -p 9000:9000 lg-react-cli
+```
+
+访问：
+
+```
+http://localhost:9000/
+```
+
 ## Corepack 签名问题
 
 如果执行 `pnpm` 或 `corepack prepare pnpm@11.7.0 --activate` 时报错：
@@ -58,7 +93,7 @@ Cannot find matching keyid
 ```
 nvm use
 corepack disable
-npm install -g pnpm@11.7.0 --force
+npm install -g pnpm@11.7.0 --force --registry=https://mirrors.huaweicloud.com/repository/npm/
 
 node -v
 pnpm -v
